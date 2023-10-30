@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">flow_project</string>
+    <string name="users_activity">USERS ACTIVITY</string>
+    <string name="launch_next_screen">LAUNCH NEXT SCREEN</string>
+    <string name="enter_username">Enter username</string>
+    <string name="add_user">ADD USER</string>
+    <string name="crypto_activity">CRYPTO ACTIVITY</string>
+</resources>
