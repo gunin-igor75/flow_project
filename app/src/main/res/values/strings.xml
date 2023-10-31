@@ -5,4 +5,5 @@
     <string name="enter_username">Enter username</string>
     <string name="add_user">ADD USER</string>
     <string name="crypto_activity">CRYPTO ACTIVITY</string>
+    <string name="refresh">Refresh</string>
 </resources>

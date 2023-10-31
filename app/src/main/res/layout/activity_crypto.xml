@@ -22,4 +22,12 @@
         android:layout_gravity="center"
         />
 
+    <Button
+        android:id="@+id/bt_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:text="@string/refresh"
+        />
+
 </FrameLayout>
