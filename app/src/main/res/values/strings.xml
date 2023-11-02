@@ -6,4 +6,7 @@
     <string name="add_user">ADD USER</string>
     <string name="crypto_activity">CRYPTO ACTIVITY</string>
     <string name="refresh">Refresh</string>
+    <string name="team_score_activity">TEAM SCORE ACTIVITY</string>
+    <string name="team1">Team1</string>
+    <string name="team2">Team2</string>
 </resources>

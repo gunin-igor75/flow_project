@@ -3,6 +3,7 @@ package com.github.gunin_igor75.flow_project.crypto_app
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.lifecycle.Lifecycle
@@ -10,7 +11,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.github.gunin_igor75.flow_project.databinding.ActivityCryptoBinding
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
+
+private const val TAG = "CryptoActivity"
 
 class CryptoActivity : AppCompatActivity() {
 
@@ -60,6 +64,16 @@ class CryptoActivity : AppCompatActivity() {
                             adapter.submitList(it.currencyList)
                         }
                     }
+                }
+            }
+        }
+        lifecycleScope.launch {
+            viewModel.state.collect{
+                when (it) {
+                    is State.Content -> {
+                        Log.d(TAG, "$it")
+                    }
+                    else -> {}
                 }
             }
         }

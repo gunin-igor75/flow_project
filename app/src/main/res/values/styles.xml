@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="game_score">
+        <item name="android:padding">16dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+</resources>

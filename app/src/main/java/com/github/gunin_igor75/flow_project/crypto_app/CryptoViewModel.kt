@@ -5,10 +5,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.merge
 import kotlinx.coroutines.flow.onStart
+import kotlinx.coroutines.flow.shareIn
 import kotlinx.coroutines.launch
 
 class CryptoViewModel : ViewModel() {
@@ -19,11 +21,12 @@ class CryptoViewModel : ViewModel() {
 
     private val loadingFlow = MutableSharedFlow<State>()
 
-    val state = repository.getCurrencyList()
+    val state = repository.getCurrencyListFlow
         .filter { it.isNotEmpty() }
         .map { State.Content(it) as State }
         .onStart { emit(State.Loading) }
         .mergeWidth(loadingFlow)
+
 
 
     fun refreshList() {

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.github.gunin_igor75.flow_project.databinding.ActivityMainBinding
 import com.github.gunin_igor75.flow_project.crypto_app.CryptoActivity
+import com.github.gunin_igor75.flow_project.game_score.GameScoreActivity
 import com.github.gunin_igor75.flow_project.users.UsersActivity
 
 class MainActivity : AppCompatActivity() {
@@ -15,10 +16,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-
         launchOnClickListener()
-
-
     }
 
     private fun launchOnClickListener() {
@@ -28,6 +26,11 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btCryptoActivity.setOnClickListener {
             val intent = CryptoActivity.newIntent(this)
+            startActivity(intent)
+        }
+
+        binding.btGameActivity.setOnClickListener {
+            val intent = GameScoreActivity.newIntent(this)
             startActivity(intent)
         }
     }

@@ -20,5 +20,10 @@
         android:layout_height="wrap_content"
         android:text="@string/crypto_activity" />
 
+    <Button
+        android:id="@+id/bt_game_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/team_score_activity" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
